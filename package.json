@@ -4,6 +4,7 @@
   "description": "routing",
   "main": "index.js",
   "scripts": {
+    "dev":"node --watch app.js",
     "start": "nodemon app.js"
   },
   "author": "",
