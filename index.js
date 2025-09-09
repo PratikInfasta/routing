@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log("✅ Database connected successfully"))
+.then(() => console.log("✅ Database connected successfully",process.env.MONGO_URL))
 .catch(err => console.error("❌ MongoDB connection error:", err.message));
 
 
