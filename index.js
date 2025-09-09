@@ -18,9 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // database connection here 
 // const MongoUri = 'mongodb+srv://pratik_db_user:pratik_db_user@testing.umckrwv.mongodb.net/test';
 
-mongoose.connect(process.env.MONGO_URL)
-  .then(() => console.log('Database connected successfully'))
-  .catch(err => console.error("❌ MongoDB connection error:", err));
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("✅ Database connected successfully"))
+.catch(err => console.error("❌ MongoDB connection error:", err.message));
 
 
 // mongoose.Schema write here 
