@@ -6,8 +6,4 @@ const router = express.Router()
 router.get('/',(req,resp)=>{
     resp.send('contact');
 })
-
-
-
-
 module.exports = router
